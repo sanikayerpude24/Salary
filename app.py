@@ -78,14 +78,3 @@ if st.button("Predict Salary"):
     prediction = model.predict(input_data)
 
     st.success(f"Predicted Salary: ₹{prediction[0]:,.2f}")
-
-import os
-# Generate requirements.txt file
-!pip freeze > requirements.txt
-
-if os.path.exists('requirements.txt'):
-    print("requirements.txt generated successfully!")
-    with open('requirements.txt', 'r') as f:
-        print(f.read())
-else:
-    print("Failed to generate requirements.txt.")
