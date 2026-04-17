@@ -80,7 +80,8 @@ if st.button("Predict Salary"):
     st.success(f"Predicted Salary: ₹{prediction[0]:,.2f}")
 
 import os
-
+# Generate requirements.txt file
+!pip freeze > requirements.txt
 
 if os.path.exists('requirements.txt'):
     print("requirements.txt generated successfully!")
